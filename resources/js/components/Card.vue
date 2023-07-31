@@ -24,7 +24,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
     </card>
 </template>
 
