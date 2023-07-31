@@ -37,6 +37,13 @@ class CardServiceProvider extends ServiceProvider
             return;
         }
 
+        Nova::router()
+            ->group(function ($router) {
+                $router->get('nova-server-metrics', function (Request $request) {
+                    return inertia('NovaServerMetrics');
+                });
+            });
+
         Route::middleware(['nova'])
                 ->prefix('nova-vendor/nova-server-metrics')
                 ->group(__DIR__.'/../routes/api.php');
