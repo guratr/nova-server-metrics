@@ -44,7 +44,7 @@ export default {
     methods: {
 
         fetchMetrics() {
-            Nova.request().get('/nova-vendor/nova-server-metrics/metrics').then((response) => {
+            Nova.request().get('/nova-vendor/llaski/nova-server-metrics/metrics').then((response) => {
                 this.initialLoading = false
                 this.metrics = response.data
 
