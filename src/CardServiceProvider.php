@@ -40,7 +40,7 @@ class CardServiceProvider extends ServiceProvider
         Nova::router()
             ->group(function ($router) {
                 $router->get('nova-server-metrics', function (Request $request) {
-                    return inertia('NovaServerMetrics');
+                    return inertia('nova-server-metrics');
                 });
             });
 
